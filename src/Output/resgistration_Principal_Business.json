@@ -1,42 +1,42 @@
 [
-  [
-    "Other business activities",
-    6851
-  ],
-  [
-    "Computer and related activities",
-    1513
-  ],
-  [
-    "Construction",
-    807
-  ],
-  [
-    "Agriculture, hunting and related service activities",
-    763
-  ],
-  [
-    "Real estate activities",
-    471
-  ],
-  [
-    "Wholesale trade and commission trade, except of motor vehicles and motorcycles",
-    387
-  ],
-  [
-    "Manufacture of food products and beverages",
-    373
-  ],
-  [
-    "Transport, storage and communications",
-    368
-  ],
-  [
-    "Other community, social and personal service activities",
-    365
-  ],
-  [
-    "Retail trade, except of motor vehicles and motorcycles; repair of personal and household goods",
-    292
-  ]
+  {
+    "PRINCIPAL_BUSINESS_ACTIVITY": "Other business activities",
+    "Number": 6851
+  },
+  {
+    "PRINCIPAL_BUSINESS_ACTIVITY": "Computer and related activities",
+    "Number": 1513
+  },
+  {
+    "PRINCIPAL_BUSINESS_ACTIVITY": "Construction",
+    "Number": 807
+  },
+  {
+    "PRINCIPAL_BUSINESS_ACTIVITY": "Agriculture, hunting and related service activities",
+    "Number": 763
+  },
+  {
+    "PRINCIPAL_BUSINESS_ACTIVITY": "Real estate activities",
+    "Number": 471
+  },
+  {
+    "PRINCIPAL_BUSINESS_ACTIVITY": "Wholesale trade and commission trade, except of motor vehicles and motorcycles",
+    "Number": 387
+  },
+  {
+    "PRINCIPAL_BUSINESS_ACTIVITY": "Manufacture of food products and beverages",
+    "Number": 373
+  },
+  {
+    "PRINCIPAL_BUSINESS_ACTIVITY": "Transport, storage and communications",
+    "Number": 368
+  },
+  {
+    "PRINCIPAL_BUSINESS_ACTIVITY": "Other community, social and personal service activities",
+    "Number": 365
+  },
+  {
+    "PRINCIPAL_BUSINESS_ACTIVITY": "Retail trade, except of motor vehicles and motorcycles; repair of personal and household goods",
+    "Number": 292
+  }
 ]
