@@ -1,7 +1,7 @@
 function authorizeCap(maharastraData) {
   const result = {};
   let key;
-  maharastraData.forEach((data) => {
+  for(data in maharastraData){
     if (data.AUTHORIZED_CAP > 0 && data.AUTHORIZED_CAP < 100000) {
       key = "< 1L";
     } else if (data.AUTHORIZED_CAP < 1000000) {
@@ -18,13 +18,13 @@ function authorizeCap(maharastraData) {
     } else {
       result[key] = 1;
     }
-  });
+  }
   return result;
 }
 
 function dateOfRegistration(maharastraData) {
   const result = {};
-  maharastraData.forEach((data) => {
+  for(data in maharastraData){
     let date = data.DATE_OF_REGISTRATION;
     let year = date.slice(-2);
     if (year >= 00 && year < 22) {
@@ -39,13 +39,13 @@ function dateOfRegistration(maharastraData) {
     } else {
       result[year] = 1;
     }
-  });
+  }
   return result;
 }
 
 function registrationPrincipalBusiness(maharastraData) {
   let result = {};
-  maharastraData.forEach((data) => {
+  for(data in maharastraData){
     const date = data.DATE_OF_REGISTRATION;
     const year = date.slice(-2);
     if (year == "15") {
@@ -56,7 +56,7 @@ function registrationPrincipalBusiness(maharastraData) {
         result[type] = 1;
       }
     }
-  });
+  }
   result = Object.entries(result)
     .sort((a, b) => b[1] - a[1])
     .slice(0, 10);
@@ -70,14 +70,14 @@ function registrationPrincipalBusiness(maharastraData) {
 
 function registrationIndustrialClass(maharastraData) {
   let result = {};
-  maharastraData.forEach((data) => {
+  for(data in maharastraData){
     const industrialClass = data.Industrial_Class;
     if (industrialClass in result) {
       result[industrialClass] += 1;
     } else {
       result[industrialClass] = 1;
     }
-  });
+  }
   result = Object.entries(result)
     .sort((a, b) => b[1] - a[1])
     .slice(0, 10);
