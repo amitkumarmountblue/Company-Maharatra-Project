@@ -1,0 +1,9 @@
+*{
+    background-color:rgb(188, 190, 190);
+}
+
+#chart1, #chart2, #chart3, #chart4{
+    margin: 20px 10px 20px 10px;
+    border-radius: 10px;
+    box-shadow: 10px 10px rgb(212, 102, 102);
+}

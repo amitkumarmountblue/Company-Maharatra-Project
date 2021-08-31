@@ -1,7 +1,7 @@
 function authorizeCap(maharastraData) {
   const result = {};
   let key;
-  for(data in maharastraData){
+  maharastraData.forEach((data) => {
     if (data.AUTHORIZED_CAP > 0 && data.AUTHORIZED_CAP < 100000) {
       key = "< 1L";
     } else if (data.AUTHORIZED_CAP < 1000000) {
@@ -18,13 +18,13 @@ function authorizeCap(maharastraData) {
     } else {
       result[key] = 1;
     }
-  }
+  });
   return result;
 }
 
 function dateOfRegistration(maharastraData) {
   const result = {};
-  for(data in maharastraData){
+  maharastraData.forEach((data) => {
     let date = data.DATE_OF_REGISTRATION;
     let year = date.slice(-2);
     if (year >= 00 && year < 22) {
@@ -39,13 +39,13 @@ function dateOfRegistration(maharastraData) {
     } else {
       result[year] = 1;
     }
-  }
+  });
   return result;
 }
 
 function registrationPrincipalBusiness(maharastraData) {
   let result = {};
-  for(data in maharastraData){
+  maharastraData.forEach((data) => {
     const date = data.DATE_OF_REGISTRATION;
     const year = date.slice(-2);
     if (year == "15") {
@@ -56,38 +56,38 @@ function registrationPrincipalBusiness(maharastraData) {
         result[type] = 1;
       }
     }
-  }
+  });
   result = Object.entries(result)
     .sort((a, b) => b[1] - a[1])
     .slice(0, 10);
-  const output = result.map(([PRINCIPAL_BUSINESS_ACTIVITY, Number]) => ({
-    PRINCIPAL_BUSINESS_ACTIVITY,
-    Number,
-  }));
+  // const output = result.map(([PRINCIPAL_BUSINESS_ACTIVITY, Number]) => ({
+  //   PRINCIPAL_BUSINESS_ACTIVITY,
+  //   Number,
+  // }));
 
-  return output;
+  return result;
 }
 
 function registrationIndustrialClass(maharastraData) {
   let result = {};
-  for(data in maharastraData){
+  maharastraData.forEach((data) => {
     const industrialClass = data.Industrial_Class;
     if (industrialClass in result) {
       result[industrialClass] += 1;
     } else {
       result[industrialClass] = 1;
     }
-  }
+  });
   result = Object.entries(result)
     .sort((a, b) => b[1] - a[1])
     .slice(0, 10);
 
-  const output = result.map(([Industrial_Class, Number]) => ({
-    Industrial_Class,
-    Number,
-  }));
+  // const output = result.map(([Industrial_Class, Number]) => ({
+  //   Industrial_Class,
+  //   Number,
+  // }));
 
-  return output;
+  return result;
 }
 
 module.exports.authorizeCap = authorizeCap;

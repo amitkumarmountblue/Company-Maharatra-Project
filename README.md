@@ -30,3 +30,7 @@ The data is dumped into the output folder as separate JSON files.
 2. Data of company registration by year from the field DATE_OF_REGISTRATION is dumped into date_of_registration.json file.
 3. Top 10 registrations by "Principal Business Activity" for the year 2015 is dumped into resgistration_Principal_Business.json file.
 4. Top 10 registrations by "Industrial Class" is dumped into registration_industrial_class.json.
+
+## High chart
+1. I have written code for visualisation for all above problem in index.js file in public folder.
+2. You can see them by running index.html file which is in the public folder, open it in the live server.

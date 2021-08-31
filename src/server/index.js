@@ -24,11 +24,11 @@ fs.createReadStream("../Data/Maharastra.csv")
         }
       });
     }
-    dumpData(cap, "../Output/authorized_cap.json");
-    dumpData(registration, "../Output/date_of_registration.json");
+    dumpData(cap, "../public/Output/authorized_cap.json");
+    dumpData(registration, "../public/Output/date_of_registration.json");
     dumpData(
       registrationPBA,
-      "../Output/resgistration_Principal_Business.json"
+      "../public/Output/resgistration_Principal_Business.json"
     );
-    dumpData(registrationIC, "../Output/registration_industrial_class.json");
+    dumpData(registrationIC, "../public/Output/registration_industrial_class.json");
   });
